@@ -19,17 +19,6 @@ class LightOn extends LightState {
 	}
 }
 
-class LightFlicker extends LightState {
-	constructor() {
-		super();
-		console.log("Light is flickering");
-	}
-
-	toogleLight(): ILightState {
-		return new LightOn();
-	}
-}
-
 class LightOff extends LightState {
 	constructor() {
 		super();
@@ -37,7 +26,7 @@ class LightOff extends LightState {
 	}
 
 	toogleLight(): ILightState {
-		return new LightFlicker();
+		return new LightOn();
 	}
 }
 
