@@ -23,15 +23,12 @@ class LightSwitch {
 	}
 
 	onPress() {
-
-		this.isOn = this.turn(!this.isOn);
-
-		// if (this.isOn) {
-		// 	this.bulb.turnOn();
-		// 	this.isOn = false;
-		// } else {
-		// 	this.bulb.turnOff();
-		// 	this.isOn = true;
-		// }
+		if (this.isOn) {
+			this.bulb.turnOn();
+			this.isOn = false;
+		} else {
+			this.bulb.turnOff();
+			this.isOn = true;
+		}
 	}
 }
